@@ -2,7 +2,7 @@ import torch.nn.functional as F
 import torch
 import torch.nn as nn
 
-# unspuervised_loss for mathing SNR of weak band to PAN band
+# unsupervised_loss for mathing SNR of weak band to PAN band
 import torch.nn.functional as F
 import torch
 import torch.nn as nn
