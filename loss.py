@@ -3,10 +3,6 @@ import torch
 import torch.nn as nn
 
 # unsupervised_loss for mathing SNR of weak band to PAN band
-import torch.nn.functional as F
-import torch
-import torch.nn as nn
-
 class SNRLoss(nn.Module):
   def __init__(self):
     super(SNRLoss,self).__init__()
