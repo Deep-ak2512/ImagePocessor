@@ -24,3 +24,12 @@ edgesY_mag = medfilt(edgesY_mag)
 fact = 0.05
 peaks = find_peaks(edgesY_mag,distance = min_dist,prominance = np.max(edgesY_mag)*fact)
      
+band_rows = [0] + sorted(peaks.tolist()) + [gray.shape[0]]
+    bands = [(band_rows[i], band_rows[i+1]) for i in range(len(band_rows)-1)]
+
+    if len(bands) > expected_bands:
+        center = len(bands) // 2
+        half = expected_bands // 2
+        bands = bands[center - half: center - half + expected_bands]
+
+    return bands
